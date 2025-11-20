@@ -18,71 +18,6 @@
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
   <link href="assets/css/main.css" rel="stylesheet">
-
-  <style>
-    /* Inline styles to support the Resume Button in Nav */
-    .btn-download-cv {
-      background: var(--accent-color, #e03a3c);
-      color: #fff !important;
-      padding: 8px 20px;
-      border-radius: 50px;
-      margin-left: 15px;
-      font-size: 14px;
-      font-weight: 600;
-      transition: 0.3s;
-      border: none;
-    }
-    .btn-download-cv:hover {
-      background: color-mix(in srgb, var(--accent-color, #e03a3c), black 15%);
-      color: #fff;
-    }
-    /* Paper Resume Styling */
-    .paper-resume {
-      background: #fff;
-      padding: 40px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.1);
-      border-radius: 8px;
-      margin-top: 20px;
-    }
-    .resume-header {
-      border-bottom: 2px solid #eee;
-      padding-bottom: 20px;
-      margin-bottom: 20px;
-    }
-    .resume-section-title {
-      font-size: 18px;
-      font-weight: 700;
-      text-transform: uppercase;
-      color: #333;
-      border-bottom: 1px solid #ddd;
-      padding-bottom: 5px;
-      margin-bottom: 15px;
-      margin-top: 20px;
-    }
-    .resume-item {
-      margin-bottom: 15px;
-    }
-    .resume-role {
-      font-weight: 700;
-      font-size: 16px;
-      color: #000;
-    }
-    .resume-company {
-      font-style: italic;
-      color: #555;
-    }
-    .resume-date {
-      float: right;
-      font-weight: 600;
-      color: #777;
-    }
-    @media print {
-      body * { visibility: hidden; }
-      #printable-resume, #printable-resume * { visibility: visible; }
-      #printable-resume { position: absolute; left: 0; top: 0; width: 100%; margin: 0; box-shadow: none; }
-      .no-print { display: none !important; }
-    }
-  </style>
 </head>
 
 <body class="index-page">
@@ -101,20 +36,20 @@
         </a>
 
         <div class="social-links text-center">
-          <a href="mailto:ramu@techslatelimited.com" class="email"><i class="bi bi-envelope"></i></a> <a href="https://linkedin.com/in/ramugurrapu" class="linkedin" target="_blank"><i class="bi bi-linkedin"></i></a> <a href="tel:+447778642927" class="phone"><i class="bi bi-telephone"></i></a> </div>
+          <a href="mailto:ramuoncloud@gmail.com" class="email"><i class="bi bi-envelope"></i></a>
+          <a href="https://linkedin.com/in/ramugurrapu" class="linkedin" target="_blank"><i class="bi bi-linkedin"></i></a>
+          <a href="https://github.com/ramugurrapu" class="github" target="_blank"><i class="bi bi-github"></i></a>
+          <a href="tel:+447778642927" class="phone"><i class="bi bi-telephone"></i></a>
+        </div>
 
         <ul>
-          <li><a href="#hero" class="active">Home</a></li>
+          <li><a href="#hero">Home</a></li>
           <li><a href="#about">About</a></li>
+          <li><a href="#skills">Expertise</a></li>
           <li><a href="#resume">Experience</a></li>
           <li><a href="#portfolio">Projects</a></li>
-          <li><a href="#printable-resume">Digital Resume</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
-
-        <a href="assets/resume/Ramu_Gurrapu_Resume.pdf" download class="btn-download-cv d-none d-xl-inline-block">
-          <i class="bi bi-download me-2"></i> Download PDF
-        </a>
-
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
     </div>
@@ -127,15 +62,18 @@
         <div class="row g-0 align-items-center">
           <div class="col-lg-6 hero-content" data-aos="fade-right" data-aos-delay="100">
             <div class="content-wrapper">
-              <h1 class="hero-title">Technology Leader <span class="typed" data-typed-items="Multi-Cloud Strategist, EdTech Founder, DevOps Excellence, Platform Engineering"></span></h1> <p class="lead">Highly skilled Technical Consultant and Founder with over 20 years of diverse experience[cite: 8]. Architecting enterprise-scale solutions across Azure, AWS, and GCP while empowering the next generation of tech talent through TechSlate Limited[cite: 11].</p>
+              <h1 class="hero-title">Technology Leader <span class="typed" data-typed-items="Multi-Cloud Strategist, EdTech Founder, DevOps Excellence, Platform Engineering, Solution Architect"></span></h1>
+              <p class="lead">Visionary technology leader with 23+ years driving digital transformation. Founder of TechSlate Limited and proven architect of enterprise-scale solutions across Azure, AWS, and GCP for global organizations including HSBC, Credit Suisse, and EBRD.</p>
 
               <div class="hero-stats" data-aos="fade-up" data-aos-delay="200">
                 <div class="stat-item">
-                  <span class="purecounter" data-purecounter-start="0" data-purecounter-end="22" data-purecounter-duration="2">0</span>
-                  <span class="stat-label">Years Experience</span> </div>
+                  <span class="purecounter" data-purecounter-start="0" data-purecounter-end="23" data-purecounter-duration="2">0</span>
+                  <span class="stat-label">Years Leading Tech Teams</span>
+                </div>
                 <div class="stat-item">
                   <span class="purecounter" data-purecounter-start="0" data-purecounter-end="100" data-purecounter-duration="2">0</span>
-                  <span class="stat-label">Students Mentored</span> </div>
+                  <span class="stat-label">Students Mentored</span>
+                </div>
                 <div class="stat-item">
                   <span class="purecounter" data-purecounter-start="0" data-purecounter-end="18" data-purecounter-duration="2">0</span>
                   <span class="stat-label">Enterprise Clients</span>
@@ -144,18 +82,35 @@
 
               <div class="hero-actions" data-aos="fade-up" data-aos-delay="300">
                 <a href="#resume" class="btn btn-primary">View Experience</a>
-                <a href="#printable-resume" class="btn btn-outline">Single Page Resume</a>
+                <a href="#contact" class="btn btn-outline">Get In Touch</a>
               </div>
 
               <div class="social-links" data-aos="fade-up" data-aos-delay="400">
                 <a href="https://linkedin.com/in/ramugurrapu" target="_blank"><i class="bi bi-linkedin"></i></a>
+                <a href="https://github.com/ramugurrapu" target="_blank"><i class="bi bi-github"></i></a>
                 <a href="mailto:ramu@techslatelimited.com"><i class="bi bi-envelope"></i></a>
               </div>
             </div>
           </div>
-           <div class="col-lg-6 hero-image" data-aos="fade-left" data-aos-delay="200">
+
+          <div class="col-lg-6 hero-image" data-aos="fade-left" data-aos-delay="200">
             <div class="image-container">
+              <div class="floating-elements">
+                <div class="floating-card card-1" data-aos="zoom-in" data-aos-delay="300">
+                  <i class="bi bi-cloud"></i>
+                  <span>Multi-Cloud Strategy</span>
+                </div>
+                <div class="floating-card card-2" data-aos="zoom-in" data-aos-delay="400">
+                  <i class="bi bi-diagram-3"></i>
+                  <span>DevOps Excellence</span>
+                </div>
+                <div class="floating-card card-3" data-aos="zoom-in" data-aos-delay="500">
+                  <i class="bi bi-lightbulb"></i>
+                  <span>EdTech Founder</span>
+                </div>
+              </div>
               <img src="assets/img/profile/photo.jpg" alt="Ramu Gurrapu" class="img-fluid hero-main-image">
+              <div class="image-overlay"></div>
             </div>
           </div>
         </div>
@@ -165,16 +120,292 @@
     <section id="about" class="about section">
       <div class="container section-title">
         <h2>About</h2>
-        <p>Multi-Cloud Strategist & Founder bridging the gap between enterprise architecture and hands-on engineering.</p>
+        <p>Transforming enterprises through cloud innovation and empowering the next generation of tech talent.</p>
       </div>
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
         <div class="row align-items-center">
-          <div class="col-lg-12" data-aos="fade-left" data-aos-delay="300">
+          <div class="col-lg-5" data-aos="fade-right" data-aos-delay="200">
+            <div class="profile-image-wrapper">
+              <div class="profile-image">
+                <img src="assets/img/profile/photo.jpg" alt="Ramu Gurrapu" class="img-fluid">
+              </div>
+              <div class="signature-section">
+                <p class="quote">"Building resilient cloud platforms and mentoring the future workforce of the UK Digital Sector." [cite: 11]</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-7" data-aos="fade-left" data-aos-delay="300">
             <div class="about-content">
-              <p>I am a highly skilled Technical Consultant with over 20 years of diverse experience in the software IT industry[cite: 8]. My versatile roles include DevOps Consultant, Cloud Consultant, Multi-Cloud Strategist, and Solution Architect[cite: 2, 9].</p>
-              <p>As the **Founder and CEO of TechSlate Limited**, I created an experiential digital platform to train fresh graduates and job seekers in Information Technology[cite: 11]. I have personally mentored over 100 students, helping more than 50% secure jobs in the UK Digital Sector[cite: 18].</p>
-              <p>My technical expertise spans **Azure, AWS, and GCP**, where I specialize in building CI/CD pipelines, Infrastructure Automation, and Platform Engineering[cite: 2, 10].</p>
+              <div class="intro">
+                <h2>Ramu Gurrapu - Cloud Leader & Founder</h2>
+                <p>With over two decades of diverse experience, I bridge the gap between high-level enterprise architecture and hands-on engineering. I specialize in transforming traditional IT operations into modern, cloud-native ecosystems powered by DevOps culture.</p>
+                <p>Beyond my corporate achievements with clients like HSBC and Credit Suisse, I am the <strong>Founder & CEO of TechSlate Limited</strong>[cite: 3]. I created an experiential digital platform to train graduates in IT, personally mentoring over 100 students with a 50% job placement success rate, contributing directly to the growth of the UK's digital workforce[cite: 11, 18].</p>
+              </div>
+
+              <div class="skills-grid">
+                <div class="skill-item" data-aos="zoom-in" data-aos-delay="400">
+                  <div class="skill-icon">
+                    <i class="bi bi-cloud-check"></i>
+                  </div>
+                  <h4>Multi-Cloud Strategist</h4>
+                  <p>Azure, AWS & GCP architecture, migrations, and optimization [cite: 2]</p>
+                </div>
+                <div class="skill-item" data-aos="zoom-in" data-aos-delay="450">
+                  <div class="skill-icon">
+                    <i class="bi bi-gear-fill"></i>
+                  </div>
+                  <h4>DevOps & Automation</h4>
+                  <p>CI/CD, IaC, Kubernetes, Terraform at enterprise scale [cite: 10]</p>
+                </div>
+                <div class="skill-item" data-aos="zoom-in" data-aos-delay="500">
+                  <div class="skill-icon">
+                    <i class="bi bi-people-fill"></i>
+                  </div>
+                  <h4>Mentorship & Leadership</h4>
+                  <p>Founder of TechSlate, leading teams and training future talent [cite: 17]</p>
+                </div>
+              </div>
+
+              <div class="journey-timeline" data-aos="fade-up" data-aos-delay="300">
+                <div class="timeline-item">
+                  <div class="year">2003</div>
+                  <div class="description">Started IT career focused on quality and software excellence [cite: 176]</div>
+                </div>
+                <div class="timeline-item">
+                  <div class="year">2021</div>
+                  <div class="description">Founded TechSlate Limited to mentor IT graduates [cite: 11]</div>
+                </div>
+                <div class="timeline-item">
+                  <div class="year">2023+</div>
+                  <div class="description">Leading platform engineering for global financial institutions</div>
+                </div>
+              </div>
+
+              <div class="cta-section" data-aos="fade-up" data-aos-delay="400">
+                <div class="fun-fact">
+                  <span class="emoji">🚀</span>
+                  <span class="text">Generating revenue & jobs through TechSlate Limited</span>
+                </div>
+                <div class="action-buttons">
+                  <a href="#resume" class="btn btn-primary">View Experience</a>
+                  <a href="mailto:ramu@techslatelimited.com" class="btn btn-outline">Contact Me</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="skills section">
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row">
+          <div class="col-lg-8">
+            <div class="skills-grid">
+              <div class="row g-4">
+                <div class="col-md-6" data-aos="flip-left" data-aos-delay="200">
+                  <div class="skill-card">
+                    <div class="skill-header">
+                      <i class="bi bi-cloud"></i>
+                      <h3>Cloud Platforms</h3>
+                    </div>
+                    <div class="skills-animation">
+                      <div class="skill-item">
+                        <div class="skill-info">
+                          <span class="skill-name">Microsoft Azure</span>
+                          <span class="skill-percentage">95%</span>
+                        </div>
+                        <div class="skill-bar progress">
+                          <div class="progress-bar" role="progressbar" aria-valuenow="95"></div>
+                        </div>
+                      </div>
+                      <div class="skill-item">
+                        <div class="skill-info">
+                          <span class="skill-name">AWS</span>
+                          <span class="skill-percentage">90%</span>
+                        </div>
+                        <div class="skill-bar progress">
+                          <div class="progress-bar" role="progressbar" aria-valuenow="90"></div>
+                        </div>
+                      </div>
+                      <div class="skill-item">
+                        <div class="skill-info">
+                          <span class="skill-name">GCP</span>
+                          <span class="skill-percentage">85%</span>
+                        </div>
+                        <div class="skill-bar progress">
+                          <div class="progress-bar" role="progressbar" aria-valuenow="85"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-6" data-aos="flip-left" data-aos-delay="300">
+                  <div class="skill-card">
+                    <div class="skill-header">
+                      <i class="bi bi-gear"></i>
+                      <h3>DevOps & Automation</h3>
+                    </div>
+                    <div class="skills-animation">
+                      <div class="skill-item">
+                        <div class="skill-info">
+                          <span class="skill-name">Terraform/IaC</span>
+                          <span class="skill-percentage">95%</span>
+                        </div>
+                        <div class="skill-bar progress">
+                          <div class="progress-bar" role="progressbar" aria-valuenow="95"></div>
+                        </div>
+                      </div>
+                      <div class="skill-item">
+                        <div class="skill-info">
+                          <span class="skill-name">Kubernetes/AKS</span>
+                          <span class="skill-percentage">90%</span>
+                        </div>
+                        <div class="skill-bar progress">
+                          <div class="progress-bar" role="progressbar" aria-valuenow="90"></div>
+                        </div>
+                      </div>
+                      <div class="skill-item">
+                        <div class="skill-info">
+                          <span class="skill-name">CI/CD Pipelines</span>
+                          <span class="skill-percentage">95%</span>
+                        </div>
+                        <div class="skill-bar progress">
+                          <div class="progress-bar" role="progressbar" aria-valuenow="95"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-6" data-aos="flip-left" data-aos-delay="400">
+                  <div class="skill-card">
+                    <div class="skill-header">
+                      <i class="bi bi-database"></i>
+                      <h3>Data Engineering</h3>
+                    </div>
+                    <div class="skills-animation">
+                      <div class="skill-item">
+                        <div class="skill-info">
+                          <span class="skill-name">Databricks</span>
+                          <span class="skill-percentage">90%</span>
+                        </div>
+                        <div class="skill-bar progress">
+                          <div class="progress-bar" role="progressbar" aria-valuenow="90"></div>
+                        </div>
+                      </div>
+                      <div class="skill-item">
+                        <div class="skill-info">
+                          <span class="skill-name">Azure Data Factory</span>
+                          <span class="skill-percentage">92%</span>
+                        </div>
+                        <div class="skill-bar progress">
+                          <div class="progress-bar" role="progressbar" aria-valuenow="92"></div>
+                        </div>
+                      </div>
+                      <div class="skill-item">
+                        <div class="skill-info">
+                          <span class="skill-name">SQL/NoSQL</span>
+                          <span class="skill-percentage">88%</span>
+                        </div>
+                        <div class="skill-bar progress">
+                          <div class="progress-bar" role="progressbar" aria-valuenow="88"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-6" data-aos="flip-left" data-aos-delay="500">
+                  <div class="skill-card">
+                    <div class="skill-header">
+                      <i class="bi bi-code-slash"></i>
+                      <h3>Programming & Scripting</h3>
+                    </div>
+                    <div class="skills-animation">
+                      <div class="skill-item">
+                        <div class="skill-info">
+                          <span class="skill-name">Python/Java</span>
+                          <span class="skill-percentage">90%</span>
+                        </div>
+                        <div class="skill-bar progress">
+                          <div class="progress-bar" role="progressbar" aria-valuenow="90"></div>
+                        </div>
+                      </div>
+                      <div class="skill-item">
+                        <div class="skill-info">
+                          <span class="skill-name">Shell/PowerShell</span>
+                          <span class="skill-percentage">95%</span>
+                        </div>
+                        <div class="skill-bar progress">
+                          <div class="progress-bar" role="progressbar" aria-valuenow="95"></div>
+                        </div>
+                      </div>
+                      <div class="skill-item">
+                        <div class="skill-info">
+                          <span class="skill-name">Groovy/HCL</span>
+                          <span class="skill-percentage">85%</span>
+                        </div>
+                        <div class="skill-bar progress">
+                          <div class="progress-bar" role="progressbar" aria-valuenow="85"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="skills-summary" data-aos="fade-left" data-aos-delay="200">
+              <h3>Professional Excellence</h3>
+              <p>A unique blend of technical architect, hands-on engineer, and business founder. Proven ability to win clients, scale platforms, and train the next generation.</p>
+
+              <div class="summary-stats">
+                <div class="stat-item" data-aos="zoom-in" data-aos-delay="300">
+                  <div class="stat-circle">
+                    <i class="bi bi-trophy"></i>
+                  </div>
+                  <div class="stat-info">
+                    <span class="stat-number">23+</span>
+                    <span class="stat-label">Years Experience</span>
+                  </div>
+                </div>
+
+                <div class="stat-item" data-aos="zoom-in" data-aos-delay="400">
+                  <div class="stat-circle">
+                    <i class="bi bi-briefcase"></i>
+                  </div>
+                  <div class="stat-info">
+                    <span class="stat-number">Founder</span>
+                    <span class="stat-label">TechSlate Ltd</span>
+                  </div>
+                </div>
+
+                <div class="stat-item" data-aos="zoom-in" data-aos-delay="500">
+                  <div class="stat-circle">
+                    <i class="bi bi-people"></i>
+                  </div>
+                  <div class="stat-info">
+                    <span class="stat-number">100+</span>
+                    <span class="stat-label">Students Mentored</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="skills-badges" data-aos="fade-up" data-aos-delay="600">
+                <h4>Certifications</h4>
+                <div class="badge-list">
+                  <div class="skill-badge">Azure Administrator (AZ-104)</div>
+                  <div class="skill-badge">Azure Fundamentals (AZ-900)</div>
+                  <div class="skill-badge">HashiCorp Terraform</div>
+                  <div class="skill-badge">DevOps Expert</div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -184,68 +415,336 @@
     <section id="resume" class="resume section">
       <div class="container section-title">
         <h2>Professional Experience</h2>
-        <p>A track record of delivery for global financial institutions and startup leadership.</p>
+        <p>Leading cloud transformation, startups, and platform engineering across global enterprises</p>
       </div>
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
         <div class="row">
           <div class="col-lg-6" data-aos="fade-right" data-aos-delay="200">
-            
-            <div class="experience-card" style="border-left: 4px solid #2ecc71; margin-bottom: 20px; background: #fff; padding: 20px; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
-              <div class="card-header">
-                <h3>Founder & CEO</h3> <h4>TechSlate Limited</h4>
-                <span class="text-muted small">Nov 2021 - Present</span> </div>
-              <div class="card-body mt-3">
-                <ul>
-                  <li>Created an Experiential Digital Platform with a Mentor Oriented program to train fresh graduates[cite: 17].</li>
-                  <li>Personally mentored over 100 students, with >50% securing jobs through guidance[cite: 18].</li>
-                  <li>Developed horizontal and vertical scaling plans to benefit the UK digital sector[cite: 20].</li>
-                </ul>
+            <div class="experience-section">
+              <div class="section-header">
+                <h2><i class="bi bi-briefcase"></i> Career Highlights</h2>
+              </div>
+
+              <div class="experience-cards">
+                
+                <div class="experience-card" data-aos="zoom-in" data-aos-delay="300" style="border-left: 4px solid #2ecc71;">
+                  <div class="card-header">
+                    <div class="role-info">
+                      <h3>Founder & CEO</h3>
+                      <h4>TechSlate Limited</h4>
+                    </div>
+                    <span class="duration">Nov 2021 - Present</span>
+                  </div>
+                  <div class="card-body">
+                    <p><strong>EdTech Leadership & Business Strategy</strong> - Created an experiential digital platform to train fresh graduates and job seekers in IT[cite: 11].</p>
+                    <ul class="achievements">
+                      <li>Mentored over 100 students with >50% job placement success in the UK Digital Sector[cite: 18].</li>
+                      <li>Developed horizontal and vertical scaling strategies to generate significant revenue[cite: 20].</li>
+                      <li>Designed the entire curriculum and technical roadmap for student mentorship[cite: 17].</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="experience-card" data-aos="zoom-in" data-aos-delay="300">
+                  <div class="card-header">
+                    <div class="role-info">
+                      <h3>Lead DevOps Engineer</h3>
+                      <h4>HSBC via Mansion House Consulting</h4>
+                    </div>
+                    <span class="duration">Sep 2023 - Feb 2025</span>
+                  </div>
+                  <div class="card-body">
+                    <p><strong>Financial Planning Platform (FPU)</strong> - Led technical design and transformation of enterprise financial platform.</p>
+                    <ul class="achievements">
+                      <li>Architected DevSecOps standards for financial data processing frameworks.</li>
+                      <li>Automated CI/CD pipelines using Ansible & Jenkins for multi-environment deployments.</li>
+                      <li>Implemented data masking/encryption using Python libraries and Avro conversion.</li>
+                      <li>Managed GCP cloud infrastructure for secure financial data processing.</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="experience-card" data-aos="zoom-in" data-aos-delay="400">
+                  <div class="card-header">
+                    <div class="role-info">
+                      <h3>Lead DevOps Engineer</h3>
+                      <h4>Royal Horticultural Society via Client Server</h4>
+                    </div>
+                    <span class="duration">Aug 2022 - Sep 2023</span>
+                  </div>
+                  <div class="card-body">
+                    <p><strong>Cloud Design & Migration (RHS Grow)</strong> - Led GCP to Azure migration and platform modernization[cite: 32, 34].</p>
+                    <ul class="achievements">
+                      <li>Designed Terraform IaC modules with Landing Zones for multi-team governance[cite: 35, 36].</li>
+                      <li>Created B2C Tenants to facilitate secure connections between external apps and API Management[cite: 39].</li>
+                      <li>Established Hub Services (SonarQube) via Azure Container Instances for shared access[cite: 38].</li>
+                      <li>Implemented Network Security Groups (NSGs), Route Tables, and vNets for application needs[cite: 41].</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="experience-card" data-aos="zoom-in" data-aos-delay="500">
+                  <div class="card-header">
+                    <div class="role-info">
+                      <h3>DevOps Engineer</h3>
+                      <h4>Credit Suisse via Synechron</h4>
+                    </div>
+                    <span class="duration">Jan 2021 - May 2022</span>
+                  </div>
+                  <div class="card-body">
+                    <p><strong>DBaaS - Database as Service</strong> - Built enterprise database platform with governance and automation[cite: 48].</p>
+                    <ul class="achievements">
+                      <li>Utilized Terraform to provision resources across Azure, AWS, and GCP (Cross-Cloud)[cite: 49].</li>
+                      <li>Packaged Database as a Service with built-in policies and guardrails into a Service Catalog[cite: 50, 52].</li>
+                      <li>Managed AKS deployments and Kubernetes operations using Kubectl and Pipelines[cite: 54].</li>
+                    </ul>
+                  </div>
+                </div>
               </div>
             </div>
-
-            <div class="experience-card" style="margin-bottom: 20px; background: #fff; padding: 20px; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
-              <div class="card-header">
-                <h3>Lead DevOps Engineer</h3> <h4>RHS, UK</h4>
-                <span class="text-muted small">Aug 2022 - Current</span> </div>
-              <div class="card-body mt-3">
-                <ul>
-                  <li>Utilised Terraform as Infrastructure as Code, implementing reusable Cloud Modules[cite: 35].</li>
-                  <li>Established Landing Zones enabling efficient management and governance across teams[cite: 36].</li>
-                  <li>Created Hub Services like SonarQube using Azure Container Instances[cite: 38].</li>
-                  <li>Set up B2C Tenants for secure connections between external apps and API Management[cite: 39].</li>
-                </ul>
-              </div>
-            </div>
-
           </div>
 
           <div class="col-lg-6" data-aos="fade-left" data-aos-delay="200">
-             <div class="experience-card" style="margin-bottom: 20px; background: #fff; padding: 20px; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
-              <div class="card-header">
-                <h3>DevOps Engineer [DBaaS]</h3> <h4>Credit Suisse, UK</h4>
-                <span class="text-muted small">Jan 2022 - May 2022</span> </div>
-              <div class="card-body mt-3">
-                <ul>
-                  <li>Utilised Terraform to provision infrastructure across Azure, AWS, and GCP (Cross-cloud)[cite: 49].</li>
-                  <li>Packaged Database as a Service (DBaaS) with guardrails and governance measures[cite: 50].</li>
-                  <li>Managed AKS (Azure Kubernetes Service), crafting deployment files and pipelines[cite: 54].</li>
-                </ul>
+            <div class="experience-section">
+              <div class="section-header">
+                <h2><i class="bi bi-star"></i> More Experience</h2>
+              </div>
+
+              <div class="experience-cards">
+                <div class="experience-card" data-aos="zoom-in" data-aos-delay="300">
+                  <div class="card-header">
+                    <div class="role-info">
+                      <h3>Azure DevOps Engineer</h3>
+                      <h4>EBRD via Cigniti-UK</h4>
+                    </div>
+                    <span class="duration">Apr 2019 - Dec 2021</span>
+                  </div>
+                  <div class="card-body">
+                    <p><strong>Journey to Cloud (J2C/Monarch)</strong> - Led cloud migration and DevOps transformation[cite: 99].</p>
+                    <ul class="achievements">
+                      <li>Provisioned Azure infrastructure using Terraform, Bicep, and ARM templates[cite: 61, 62].</li>
+                      <li>Developed pipelines for Angular, Java Spring Boot, and Python via Jenkins/Azure DevOps[cite: 64].</li>
+                      <li>Initiated and developed a Self-Service Portal for internal teams[cite: 125].</li>
+                      <li>Implemented monitoring using Nagios and ELK stack (Elasticsearch, Logstash, Kibana)[cite: 73].</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="experience-card" data-aos="zoom-in" data-aos-delay="400">
+                  <div class="card-header">
+                    <div class="role-info">
+                      <h3>DevOps Consultant</h3>
+                      <h4>Cigniti-India (Multiple Clients)</h4>
+                    </div>
+                    <span class="duration">Mar 2017 - Mar 2019</span>
+                  </div>
+                  <div class="card-body">
+                    <p><strong>Cloud Initiation Programs</strong> - Delivered DevOps solutions for US and Canadian clients[cite: 130].</p>
+                    <ul class="achievements">
+                      <li>Clients: Fidelis CyberSecurity, AeroHive Networks, UMUC, Teranet[cite: 131].</li>
+                      <li>Migrated projects from on-premises TFS to Azure DevOps (VSO)[cite: 145].</li>
+                      <li>Generated approx. 2M in revenue by winning back clients through rapid Proof of Concepts[cite: 13, 14].</li>
+                      <li>Automated build/deployment pipelines using Jenkins and Azure DevOps[cite: 148].</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="experience-card" data-aos="zoom-in" data-aos-delay="500">
+                  <div class="card-header">
+                    <div class="role-info">
+                      <h3>Technical Delivery Manager</h3>
+                      <h4>UnitedHealth Group (Optum)</h4>
+                    </div>
+                    <span class="duration">Aug 2013 - Mar 2017</span>
+                  </div>
+                  <div class="card-body">
+                    <p><strong>Intelligent Directory - Health Information Exchange</strong> - Led DevOps and delivery management[cite: 156].</p>
+                    <ul class="achievements">
+                        <li>Contributed to the development of Health Information Exchange (HIE)[cite: 22].</li>
+                        <li>Designed architecture, conducted code reviews, and set up CI/CD tools[cite: 23].</li>
+                    </ul>
+                  </div>
+                </div>
               </div>
             </div>
 
-            <div class="experience-card" style="margin-bottom: 20px; background: #fff; padding: 20px; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
-              <div class="card-header">
-                <h3>Lead Technical Consultant</h3> <h4>EBRD, UK</h4>
-                <span class="text-muted small">Apr 2019 - Dec 2021</span> </div>
-              <div class="card-body mt-3">
-                <ul>
-                  <li>Used Terraform for infrastructure provisioning in Azure (AKS, VMs, Azure Functions)[cite: 61].</li>
-                  <li>Employed Bicep and ARM templating for provisioning Azure PaaS components[cite: 62].</li>
-                  <li>Developed pipelines using Jenkins and Azure DevOps for Angular, Java, and Python apps[cite: 64].</li>
-                  <li>Implemented monitoring using tools like Nagios and ELK (Elasticsearch, Logstash, Kibana)[cite: 73].</li>
-                </ul>
+            <div class="education-section" style="margin-top: 30px;">
+              <div class="section-header">
+                <h2><i class="bi bi-mortarboard"></i> Education</h2>
               </div>
+              <div class="education-timeline">
+                <div class="education-item" data-aos="slide-up" data-aos-delay="300">
+                  <div class="education-content">
+                    <div class="degree-header">
+                      <h3>Bachelor of Technology</h3>
+                    </div>
+                    <h4 class="institution">Information Technology - JNTU, Hyderabad, India [cite: 181]</h4>
+                  </div>
+                </div>
+                <div class="education-item" data-aos="slide-up" data-aos-delay="400">
+                  <div class="education-content">
+                    <div class="degree-header">
+                      <h3>Diploma in Mining Engineering</h3>
+                    </div>
+                    <h4 class="institution">Hyderabad, India [cite: 182]</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="portfolio" class="portfolio section">
+      <div class="container section-title">
+        <h2>Key Projects & Achievements</h2>
+        <p>Delivering enterprise-scale cloud and data solutions across industries</p>
+      </div>
+
+      <div class="container-fluid" data-aos="fade-up" data-aos-delay="100">
+        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+          <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="200">
+            <li data-filter="*" class="filter-active"><i class="bi bi-grid-3x3"></i> All Projects</li>
+            <li data-filter=".filter-cloud">Cloud Migration</li>
+            <li data-filter=".filter-devops">DevOps</li>
+            <li data-filter=".filter-startup">StartUp</li>
+          </ul>
+
+          <div class="row g-4 isotope-container" data-aos="fade-up" data-aos-delay="300">
+            
+            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item isotope-item filter-startup">
+              <article class="portfolio-entry">
+                <figure class="entry-image">
+                  <img src="assets/img/portfolio/portfolio-6.webp" class="img-fluid" alt="TechSlate EdTech" loading="lazy">
+                  <div class="entry-overlay">
+                    <div class="overlay-content">
+                      <div class="entry-meta">EdTech • Startup</div>
+                      <h3 class="entry-title">TechSlate Mentorship Platform</h3>
+                      <div class="entry-links">
+                        <a href="#" class="project-detail">
+                          <i class="bi bi-arrow-right"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </figure>
+              </article>
+            </div>
+
+            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item isotope-item filter-devops">
+              <article class="portfolio-entry">
+                <figure class="entry-image">
+                  <img src="assets/img/portfolio/portfolio-1.webp" class="img-fluid" alt="HSBC FPU Platform" loading="lazy">
+                  <div class="entry-overlay">
+                    <div class="overlay-content">
+                      <div class="entry-meta">DevOps • FinTech</div>
+                      <h3 class="entry-title">HSBC Financial Planning Platform</h3>
+                      <div class="entry-links">
+                        <a href="#" class="project-detail">
+                          <i class="bi bi-arrow-right"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </figure>
+              </article>
+            </div>
+
+            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item isotope-item filter-cloud">
+              <article class="portfolio-entry">
+                <figure class="entry-image">
+                  <img src="assets/img/portfolio/portfolio-10.webp" class="img-fluid" alt="RHS Cloud Migration" loading="lazy">
+                  <div class="entry-overlay">
+                    <div class="overlay-content">
+                      <div class="entry-meta">Cloud Migration • Azure</div>
+                      <h3 class="entry-title">GCP to Azure Migration</h3>
+                      <div class="entry-links">
+                        <a href="#" class="project-detail">
+                          <i class="bi bi-arrow-right"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </figure>
+              </article>
+            </div>
+
+            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item isotope-item filter-devops">
+              <article class="portfolio-entry">
+                <figure class="entry-image">
+                  <img src="assets/img/portfolio/portfolio-4.webp" class="img-fluid" alt="DBaaS Platform" loading="lazy">
+                  <div class="entry-overlay">
+                    <div class="overlay-content">
+                      <div class="entry-meta">Platform Engineering</div>
+                      <h3 class="entry-title">Credit Suisse DBaaS</h3>
+                      <div class="entry-links">
+                        <a href="#" class="project-detail">
+                          <i class="bi bi-arrow-right"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </figure>
+              </article>
+            </div>
+
+            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item isotope-item filter-cloud">
+              <article class="portfolio-entry">
+                <figure class="entry-image">
+                  <img src="assets/img/portfolio/portfolio-2.webp" class="img-fluid" alt="EBRD Journey to Cloud" loading="lazy">
+                  <div class="entry-overlay">
+                    <div class="overlay-content">
+                      <div class="entry-meta">Cloud Transformation</div>
+                      <h3 class="entry-title">EBRD Journey to Cloud</h3>
+                      <div class="entry-links">
+                        <a href="#" class="project-detail">
+                          <i class="bi bi-arrow-right"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </figure>
+              </article>
+            </div>
+
+            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item isotope-item filter-devops">
+              <article class="portfolio-entry">
+                <figure class="entry-image">
+                  <img src="assets/img/portfolio/portfolio-11.webp" class="img-fluid" alt="Kubernetes Platform" loading="lazy">
+                  <div class="entry-overlay">
+                    <div class="overlay-content">
+                      <div class="entry-meta">Container Orchestration</div>
+                      <h3 class="entry-title">AKS Platform Engineering</h3>
+                      <div class="entry-links">
+                        <a href="#" class="project-detail">
+                          <i class="bi bi-arrow-right"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </figure>
+              </article>
+            </div>
+
+            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item isotope-item filter-devops">
+              <article class="portfolio-entry">
+                <figure class="entry-image">
+                  <img src="assets/img/portfolio/portfolio-5.webp" class="img-fluid" alt="Terraform IaC" loading="lazy">
+                  <div class="entry-overlay">
+                    <div class="overlay-content">
+                      <div class="entry-meta">Infrastructure as Code</div>
+                      <h3 class="entry-title">Multi-Cloud Terraform Modules</h3>
+                      <div class="entry-links">
+                        <a href="#" class="project-detail">
+                          <i class="bi bi-arrow-right"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </figure>
+              </article>
             </div>
 
           </div>
@@ -253,95 +752,95 @@
       </div>
     </section>
 
-    <section id="printable-resume" class="section light-background">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-10">
-            
-            <div class="text-center mb-4 no-print">
-              <h2>Single Page Digital Resume</h2>
-              <p>A print-friendly version of my professional summary.</p>
-              <button onclick="window.print()" class="btn btn-primary"><i class="bi bi-printer"></i> Print / Save as PDF</button>
-              <a href="assets/resume/Ramu_Gurrapu_Resume.pdf" download class="btn btn-outline-dark ms-2"><i class="bi bi-download"></i> Download Original DOCX/PDF</a>
-            </div>
+    <section id="contact" class="contact section light-background">
+      <div class="container section-title">
+        <h2>Get In Touch</h2>
+        <p>Open to leadership opportunities in Cloud, DevOps, and Data Engineering</p>
+      </div>
 
-            <div class="paper-resume">
-              <div class="resume-header row">
-                <div class="col-md-8">
-                  <h1 style="margin:0; color: var(--heading-color);">Ramu Gurrapu</h1>
-                  <p style="font-size: 18px; color: var(--accent-color);">Multi-Cloud Strategist, Lead DevOps Engineer & Founder</p> </div>
-                <div class="col-md-4 text-md-end">
-                  <p style="margin:0;"><strong>Email:</strong> ramu@techslatelimited.com</p> <p style="margin:0;"><strong>Mobile:</strong> 0777 864 2927</p> <p style="margin:0;"><strong>Loc:</strong> United Kingdom</p>
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row g-4 g-lg-5">
+          <div class="col-lg-5">
+            <div class="info-box" data-aos="fade-up" data-aos-delay="200">
+              <h3>Contact Information</h3>
+              <p>Available for VP/Director level positions in Cloud Architecture, Platform Engineering, and DevOps Leadership.</p>
+
+              <div class="info-item" data-aos="fade-up" data-aos-delay="300">
+                <div class="icon-box">
+                  <i class="bi bi-geo-alt"></i>
+                </div>
+                <div class="content">
+                  <h4>Location</h4>
+                  <p>United Kingdom</p>
+                  <p>Open to Remote & Hybrid</p>
                 </div>
               </div>
 
-              <div class="resume-section">
-                <div class="resume-section-title">Professional Summary</div>
-                <p>Highly skilled Technical Consultant with over 20 years of experience[cite: 8]. Expertise in DevOps engineering (CI/CD, Infrastructure Automation), Multi-Cloud Strategy (Azure/AWS/GCP), and Platform Engineering[cite: 10]. Founder of TechSlate Limited, demonstrating strong leadership and mentorship capabilities[cite: 11].</p>
-              </div>
-
-              <div class="resume-section">
-                <div class="resume-section-title">Technical Expertise</div>
-                <div class="row">
-                  <div class="col-md-12">
-                    <p><strong>Cloud & DevOps:</strong> Azure, AWS, GCP, Docker, Kubernetes, Helm, Terraform, Ansible, Jenkins, Azure DevOps[cite: 30].</p>
-                    <p><strong>Languages:</strong> Java, Python, Go, Shell Script, PowerShell, HCL[cite: 30].</p>
-                    <p><strong>Monitoring:</strong> ELK, Nagios, Prometheus, Grafana, Azure Monitor[cite: 30].</p>
-                  </div>
+              <div class="info-item" data-aos="fade-up" data-aos-delay="400">
+                <div class="icon-box">
+                  <i class="bi bi-telephone"></i>
+                </div>
+                <div class="content">
+                  <h4>Phone</h4>
+                  <p>+44 777 864 2927</p>
                 </div>
               </div>
 
-              <div class="resume-section">
-                <div class="resume-section-title">Work Experience</div>
-
-                <div class="resume-item">
-                  <div class="row">
-                    <div class="col-8"><span class="resume-role">Founder & CEO</span> | <span class="resume-company">TechSlate Limited</span></div> <div class="col-4 text-end"><span class="resume-date">Nov 2021 - Present</span></div>
-                  </div>
-                  <ul>
-                    <li>Created an experiential digital platform to train fresh graduates in IT[cite: 17].</li>
-                    <li>Mentored 100+ students with >50% placement success; generated significant startup revenue[cite: 18].</li>
-                  </ul>
+              <div class="info-item" data-aos="fade-up" data-aos-delay="500">
+                <div class="icon-box">
+                  <i class="bi bi-envelope"></i>
                 </div>
-
-                <div class="resume-item">
-                  <div class="row">
-                    <div class="col-8"><span class="resume-role">Lead DevOps Engineer</span> | <span class="resume-company">RHS, UK</span></div> <div class="col-4 text-end"><span class="resume-date">Aug 2022 - Present</span></div> </div>
-                  <ul>
-                    <li>Implemented reusable Cloud Modules using Terraform; established Landing Zones for governance[cite: 35, 36].</li>
-                    <li>Created Hub Services (SonarQube) via Azure Container Instances; Configured API Management[cite: 38, 40].</li>
-                  </ul>
+                <div class="content">
+                  <h4>Email</h4>
+                  <p>ramu@techslatelimited.com</p>
                 </div>
+              </div>
 
-                <div class="resume-item">
-                  <div class="row">
-                    <div class="col-8"><span class="resume-role">DevOps Engineer</span> | <span class="resume-company">Credit Suisse, UK</span></div> <div class="col-4 text-end"><span class="resume-date">Jan 2022 - May 2022</span></div> </div>
-                  <ul>
-                    <li>Provisioned cross-cloud infrastructure (Azure, AWS, GCP) using Terraform[cite: 49].</li>
-                    <li>Packaged DBaaS with robust guardrails; Managed AKS clusters and pipelines[cite: 50, 54].</li>
-                  </ul>
+              <div class="info-item" data-aos="fade-up" data-aos-delay="600">
+                <div class="icon-box">
+                  <i class="bi bi-linkedin"></i>
                 </div>
-
-                <div class="resume-item">
-                  <div class="row">
-                    <div class="col-8"><span class="resume-role">Lead Technical Consultant</span> | <span class="resume-company">EBRD, UK</span></div> <div class="col-4 text-end"><span class="resume-date">Apr 2019 - Dec 2021</span></div> </div>
-                  <ul>
-                    <li>Used Terraform/Bicep for Azure provisioning (AKS, VMs, Functions)[cite: 61, 62].</li>
-                    <li>Designed pipelines using Jenkins/Azure DevOps; Implemented ELK/Nagios monitoring[cite: 64, 73].</li>
-                  </ul>
+                <div class="content">
+                  <h4>Professional Network</h4>
+                  <p><a href="https://linkedin.com/in/ramugurrapu" target="_blank">LinkedIn Profile</a></p>
+                  <p><a href="https://github.com/ramugurrapu" target="_blank">GitHub Portfolio</a></p>
                 </div>
-                 <div class="resume-item">
-                  <div class="row">
-                    <div class="col-8"><span class="resume-role">DevOps Consultant</span> | <span class="resume-company">Cigniti (Fidelis, AeroHive)</span></div> <div class="col-4 text-end"><span class="resume-date">Mar 2017 - Mar 2019</span></div>
-                  </div>
-                  <ul>
-                   <li>Automated build/deployments; Migrated on-prem TFS to VSO; Managed AKS deployments[cite: 134, 145, 149].</li>
-                  </ul>
-                </div>
-
               </div>
             </div>
+          </div>
 
+          <div class="col-lg-7">
+            <div class="contact-form" data-aos="fade-up" data-aos-delay="300">
+              <h3>Send a Message</h3>
+              <p>Interested in discussing leadership opportunities, consulting engagements, or speaking opportunities? Let's connect.</p>
+
+              <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+                <div class="row gy-4">
+                  <div class="col-md-6">
+                    <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
+                  </div>
+
+                  <div class="col-md-6">
+                    <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
+                  </div>
+
+                  <div class="col-12">
+                    <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
+                  </div>
+
+                  <div class="col-12">
+                    <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
+                  </div>
+
+                  <div class="col-12 text-center">
+                    <div class="loading">Loading</div>
+                    <div class="error-message"></div>
+                    <div class="sent-message">Thank you! I'll get back to you soon.</div>
+                    <button type="submit" class="btn">Send Message</button>
+                  </div>
+                </div>
+              </form>
+            </div>
           </div>
         </div>
       </div>
@@ -349,13 +848,14 @@
 
   </main>
 
-  <footer id="footer" class="footer dark-background no-print">
+  <footer id="footer" class="footer dark-background">
     <div class="container">
       <div class="copyright text-center">
         <p>© <span>Copyright 2025</span> <strong class="px-1 sitename">Ramu Gurrapu</strong> <span>All Rights Reserved</span></p>
       </div>
       <div class="social-links d-flex justify-content-center">
         <a href="https://linkedin.com/in/ramugurrapu" target="_blank"><i class="bi bi-linkedin"></i></a>
+        <a href="https://github.com/ramugurrapu" target="_blank"><i class="bi bi-github"></i></a>
         <a href="mailto:ramu@techslatelimited.com"><i class="bi bi-envelope"></i></a>
       </div>
       <div class="credits">
