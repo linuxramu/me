@@ -7,7 +7,7 @@
   <meta name="description" content="Technology Leader & Founder with 23+ years experience in Cloud, DevOps, and Data Engineering">
   <meta name="keywords" content="Cloud Architecture, DevOps, Azure, AWS, GCP, Data Engineering, Platform Engineering, TechSlate">
 
-  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/favicon3.ico" rel="icon">
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Open+Sans:wght@300;400;600;700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -22,40 +22,134 @@
 
 <body class="index-page">
 
-  <header id="header" class="header d-flex align-items-center fixed-top">
-    <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
-      <a href="index.html" class="logo d-flex align-items-center"></a>
+  <script>
+    function validateCode() {
+        // The secret code
+        const secret = "1234"; 
+        
+        const input = document.getElementById('accessCodeInput').value;
+        const lockScreen = document.getElementById('site-lock');
+        const errorMsg = document.getElementById('error-msg');
 
-      <nav id="navmenu" class="navmenu">
-        <div class="profile-img">
-          <img src="assets/img/profile/photo.jpg" alt="Ramu Gurrapu" class="img-fluid rounded-circle">
-        </div>
+        if (input === secret) {
+            // Fade out effect
+            lockScreen.style.opacity = '0';
+            lockScreen.style.transition = 'opacity 0.5s ease';
+            
+            // Remove the lock screen from the page after the fade
+            setTimeout(() => {
+                lockScreen.style.display = 'none';
+            }, 500);
+        } else {
+            // Show error message
+            errorMsg.style.display = 'block';
+            // Shake animation (optional visual feedback)
+            document.getElementById('accessCodeInput').classList.add('is-invalid');
+        }
+    }
+</script>
 
-        <a href="index.html" class="logo d-flex align-items-center justify-content-center active">
-          <h1 class="sitename">Ramu Gurrapu</h1>
-        </a>
+<div id="site-lock" style="position: fixed; top: 0; left: 0; width: 100%; height: 100vh; background-color: #ffffff; z-index: 99999; display: flex; justify-content: center; align-items: center;">
+  <div class="card shadow-lg p-4" style="max-width: 400px; width: 90%;">
+      <div class="card-body text-center">
 
-        <div class="social-links text-center">
-          <a href="mailto:ramuoncloud@gmail.com" class="email"><i class="bi bi-envelope"></i></a>
-          <a href="https://linkedin.com/in/ramugurrapu" class="linkedin" target="_blank"><i class="bi bi-linkedin"></i></a>
-          <a href="https://github.com/ramugurrapu" class="github" target="_blank"><i class="bi bi-github"></i></a>
-          <a href="tel:+447778642927" class="phone"><i class="bi bi-telephone"></i></a>
-        </div>
+          <h3 class="mb-2">
+              <i class="bi bi-lock-fill text-primary"></i> Protected
+          </h3>
 
-        <ul>
-          <li><a href="#hero">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#skills">Expertise</a></li>
-          <li><a href="#resume">Experience</a></li>
-          <li><a href="#portfolio">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
+
+          <p class="text-muted">Please enter the access code to view this portfolio.</p>
+          
+          <div class="mb-3">
+              <input type="password" id="accessCodeInput" class="form-control text-center" placeholder="Enter Code" onkeydown="if(event.key==='Enter'){validateCode()}">
+          </div>
+          
+          <button onclick="validateCode()" class="btn btn-primary w-100">Unlock</button>
+          
+          <p id="error-msg" class="text-danger mt-2" style="display: none; font-size: 0.9rem;">
+              <i class="bi bi-exclamation-circle me-1"></i> Incorrect code. Try again.
+          </p>
+      </div>
+  </div>
+</div>
+
+
+  <nav id="header" class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
+    <div class="container-fluid">
+      
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="assets/img/profile/photo.jpg" alt="Ramu Gurrapu" width="40" height="40" class="rounded-circle me-2">
+        <span class="fw-bold fs-4">Ramu Gurrapu</span>
+      </a>
+  
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu" aria-controls="navmenu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <div class="collapse navbar-collapse" id="navmenu">
+    
+        <ul class="navbar-nav ms-auto align-items-center">
+            <li class="nav-item"><a class="nav-link active" href="#hero">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="#skills">Expertise</a></li>
+            <li class="nav-item"><a class="nav-link" href="#resume">Experience</a></li>
+            <li class="nav-item"><a class="nav-link" href="#portfolio">Projects</a></li>
+    
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="interestsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Interests
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="interestsDropdown">
+                    <li>
+                        <a class="dropdown-item" href="#flute">
+                            <i class="bi bi-music-note-beamed me-2 text-primary"></i>Flute
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="#charity">
+                            <i class="bi bi-heart-fill me-2 text-danger"></i>Charity
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+
+            
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="downloadsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Downloads
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="downloadsDropdown">
+                    <li>
+                        <a class="dropdown-item" href="Full_Resume.pdf" target="_blank">
+                            <i class="bi bi-file-earmark-pdf me-2"></i>Full Resume
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="Single_Page_Resume.pdf" target="_blank">
+                            <i class="bi bi-file-earmark-text me-2"></i>Single Page Resume
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
         </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-      </nav>
+    
+        <div class="social-links d-flex align-items-center ms-lg-3 mt-3 mt-lg-0">
+            <a href="mailto:ramuoncloud@gmail.com" class="mx-2 text-dark"><i class="bi bi-envelope fs-5"></i></a>
+            <a href="https://linkedin.com/in/ramugurrapu" class="mx-2 text-dark" target="_blank"><i class="bi bi-linkedin fs-5"></i></a>
+            <a href="https://github.com/linuxramu?tab=repositories" class="mx-2 text-dark" target="_blank"><i class="bi bi-github fs-5"></i></a>
+            <a href="https://github.com/techslateramu?tab=repositories" class="mx-2 text-dark" target="_blank"><i class="bi bi-github fs-5"></i></a>
+            <a href="tel:+919299991020" class="mx-2 text-dark"><i class="bi bi-telephone fs-5"></i></a>
+        </div>
+    
     </div>
-  </header>
+    </div>
+  </nav>
 
   <main class="main">
+
+    
 
     <section id="hero" class="hero section">
       <div class="container">
@@ -63,8 +157,9 @@
           <div class="col-lg-6 hero-content" data-aos="fade-right" data-aos-delay="100">
             <div class="content-wrapper">
               <h1 class="hero-title">Technology Leader <span class="typed" data-typed-items="Multi-Cloud Strategist, EdTech Founder, DevOps Excellence, Platform Engineering, Solution Architect"></span></h1>
-              <p class="lead">Visionary technology leader with 23+ years driving digital transformation. Founder of TechSlate Limited and proven architect of enterprise-scale solutions across Azure, AWS, and GCP for global organizations including HSBC, Credit Suisse, and EBRD.</p>
-
+              <p class="lead">
+                Visionary technology leader with 23+ years driving digital transformation and architecting enterprise cloud, DevOps, and data platforms across Azure, AWS, and GCP. Skilled in delivering large-scale modernization, AI-driven automation, and secure, high-performance cloud solutions across industries including FinTech, Banking, Insurance, eCommerce, Healthcare, Telecom, and Public Sector. As Founder of TechSlate Limited, I provide next-generation cloud training and consulting powered by an AI-driven automated learning platform that enables students to build real-world skills, track progress intelligently, and crack interviews—becoming job-ready with speed and confidence.                            
+              </p>
               <div class="hero-stats" data-aos="fade-up" data-aos-delay="200">
                 <div class="stat-item">
                   <span class="purecounter" data-purecounter-start="0" data-purecounter-end="23" data-purecounter-duration="2">0</span>
@@ -87,8 +182,9 @@
 
               <div class="social-links" data-aos="fade-up" data-aos-delay="400">
                 <a href="https://linkedin.com/in/ramugurrapu" target="_blank"><i class="bi bi-linkedin"></i></a>
-                <a href="https://github.com/ramugurrapu" target="_blank"><i class="bi bi-github"></i></a>
-                <a href="mailto:ramu@techslatelimited.com"><i class="bi bi-envelope"></i></a>
+                <a href="https://github.com/linuxramu?tab=repositories" target="_blank"><i class="bi bi-github"></i></a>
+                <a href="https://github.com/techslateramu?tab=repositories" target="_blank"><i class="bi bi-github"></i></a>
+                <a href="mailto:ramuoncloud@gmail.com"><i class="bi bi-envelope"></i></a>
               </div>
             </div>
           </div>
@@ -131,7 +227,7 @@
                 <img src="assets/img/profile/photo.jpg" alt="Ramu Gurrapu" class="img-fluid">
               </div>
               <div class="signature-section">
-                <p class="quote">"Building resilient cloud platforms and mentoring the future workforce of the UK Digital Sector." [cite: 11]</p>
+                <p class="quote">"Building resilient cloud platforms and mentoring the future workforce of the UK Digital Sector." </p>
               </div>
             </div>
           </div>
@@ -141,7 +237,7 @@
               <div class="intro">
                 <h2>Ramu Gurrapu - Cloud Leader & Founder</h2>
                 <p>With over two decades of diverse experience, I bridge the gap between high-level enterprise architecture and hands-on engineering. I specialize in transforming traditional IT operations into modern, cloud-native ecosystems powered by DevOps culture.</p>
-                <p>Beyond my corporate achievements with clients like HSBC and Credit Suisse, I am the <strong>Founder & CEO of TechSlate Limited</strong>[cite: 3]. I created an experiential digital platform to train graduates in IT, personally mentoring over 100 students with a 50% job placement success rate, contributing directly to the growth of the UK's digital workforce[cite: 11, 18].</p>
+                <p>Beyond my corporate achievements with clients like HSBC and Credit Suisse, I am the <strong>Founder & CEO of TechSlate Limited</strong>. I created an experiential digital platform to train graduates in IT, personally mentoring over 100 students with a 50% job placement success rate, contributing directly to the growth of the UK's digital workforce.</p>
               </div>
 
               <div class="skills-grid">
@@ -150,32 +246,32 @@
                     <i class="bi bi-cloud-check"></i>
                   </div>
                   <h4>Multi-Cloud Strategist</h4>
-                  <p>Azure, AWS & GCP architecture, migrations, and optimization [cite: 2]</p>
+                  <p>Azure, AWS & GCP architecture, migrations, and optimization </p>
                 </div>
                 <div class="skill-item" data-aos="zoom-in" data-aos-delay="450">
                   <div class="skill-icon">
                     <i class="bi bi-gear-fill"></i>
                   </div>
                   <h4>DevOps & Automation</h4>
-                  <p>CI/CD, IaC, Kubernetes, Terraform at enterprise scale [cite: 10]</p>
+                  <p>CI/CD, IaC, Kubernetes, Terraform at enterprise scale </p>
                 </div>
                 <div class="skill-item" data-aos="zoom-in" data-aos-delay="500">
                   <div class="skill-icon">
                     <i class="bi bi-people-fill"></i>
                   </div>
                   <h4>Mentorship & Leadership</h4>
-                  <p>Founder of TechSlate, leading teams and training future talent [cite: 17]</p>
+                  <p>Founder of TechSlate, leading teams and training future talent </p>
                 </div>
               </div>
 
               <div class="journey-timeline" data-aos="fade-up" data-aos-delay="300">
                 <div class="timeline-item">
                   <div class="year">2003</div>
-                  <div class="description">Started IT career focused on quality and software excellence [cite: 176]</div>
+                  <div class="description">Started IT career focused on quality and software excellence </div>
                 </div>
                 <div class="timeline-item">
                   <div class="year">2021</div>
-                  <div class="description">Founded TechSlate Limited to mentor IT graduates [cite: 11]</div>
+                  <div class="description">Founded TechSlate Limited to mentor IT graduates </div>
                 </div>
                 <div class="timeline-item">
                   <div class="year">2023+</div>
@@ -190,7 +286,7 @@
                 </div>
                 <div class="action-buttons">
                   <a href="#resume" class="btn btn-primary">View Experience</a>
-                  <a href="mailto:ramu@techslatelimited.com" class="btn btn-outline">Contact Me</a>
+                  <a href="mailto:ramuoncloud@gmail.com" class="btn btn-outline">Contact Me</a>
                 </div>
               </div>
             </div>
@@ -215,71 +311,286 @@
                       <div class="skill-item">
                         <div class="skill-info">
                           <span class="skill-name">Microsoft Azure</span>
-                          <span class="skill-percentage">95%</span>
+                          <span class="skill-percentage">75%</span>
                         </div>
                         <div class="skill-bar progress">
-                          <div class="progress-bar" role="progressbar" aria-valuenow="95"></div>
+                          <div class="progress-bar" role="progressbar" aria-valuenow="75"></div>
                         </div>
-                      </div>
+
+                      </div>                      
+
                       <div class="skill-item">
                         <div class="skill-info">
                           <span class="skill-name">AWS</span>
-                          <span class="skill-percentage">90%</span>
+                          <span class="skill-percentage">70%</span>
                         </div>
                         <div class="skill-bar progress">
-                          <div class="progress-bar" role="progressbar" aria-valuenow="90"></div>
+                          <div class="progress-bar" role="progressbar" aria-valuenow="70"></div>
+                        </div>
+                      </div>
+                      
+                      <div class="skill-item">
+                        <div class="skill-info">
+                          <span class="skill-name">GCP</span>
+                          <span class="skill-percentage">65%</span>
+                        </div>
+                        <div class="skill-bar progress">
+                          <div class="progress-bar" role="progressbar" aria-valuenow="65"></div>
+                        </div>
+                      </div>
+
+                      <div class="skill-item">
+                        <div class="skill-info">
+                          <span class="skill-name">DigitalOcean</span>
+                          <span class="skill-percentage">45%</span>
+                        </div>
+                        <div class="skill-bar progress">
+                          <div class="progress-bar" role="progressbar" aria-valuenow="45"></div>
                         </div>
                       </div>
                       <div class="skill-item">
                         <div class="skill-info">
-                          <span class="skill-name">GCP</span>
-                          <span class="skill-percentage">85%</span>
+                          <span class="skill-name">OVHcloud</span>
+                          <span class="skill-percentage">30%</span>
                         </div>
                         <div class="skill-bar progress">
-                          <div class="progress-bar" role="progressbar" aria-valuenow="85"></div>
+                          <div class="progress-bar" role="progressbar" aria-valuenow="30"></div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
 
-                <div class="col-md-6" data-aos="flip-left" data-aos-delay="300">
+
+                
+                <div class="col-md-6" data-aos="flip-left" data-aos-delay="100">
                   <div class="skill-card">
                     <div class="skill-header">
-                      <i class="bi bi-gear"></i>
-                      <h3>DevOps & Automation</h3>
+                      <i class="bi bi-cloud-check"></i>
+                      <h3>Cloud Platforms</h3>
                     </div>
                     <div class="skills-animation">
                       <div class="skill-item">
                         <div class="skill-info">
-                          <span class="skill-name">Terraform/IaC</span>
+                          <span class="skill-name">Microsoft Azure (PaaS/IaaS/Net)</span>
                           <span class="skill-percentage">95%</span>
                         </div>
                         <div class="skill-bar progress">
-                          <div class="progress-bar" role="progressbar" aria-valuenow="95"></div>
+                          <div class="progress-bar" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
                       </div>
                       <div class="skill-item">
                         <div class="skill-info">
-                          <span class="skill-name">Kubernetes/AKS</span>
+                          <span class="skill-name">AWS (EC2/Lambda/VPC)</span>
                           <span class="skill-percentage">90%</span>
                         </div>
                         <div class="skill-bar progress">
-                          <div class="progress-bar" role="progressbar" aria-valuenow="90"></div>
+                          <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
                       </div>
                       <div class="skill-item">
                         <div class="skill-info">
-                          <span class="skill-name">CI/CD Pipelines</span>
-                          <span class="skill-percentage">95%</span>
+                          <span class="skill-name">Google Cloud Platform</span>
+                          <span class="skill-percentage">80%</span>
                         </div>
                         <div class="skill-bar progress">
-                          <div class="progress-bar" role="progressbar" aria-valuenow="95"></div>
+                          <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
+                
+                <div class="col-md-6" data-aos="flip-left" data-aos-delay="200">
+                  <div class="skill-card">
+                    <div class="skill-header">
+                      <i class="bi bi-box-seam"></i>
+                      <h3>Containers & Orchestration</h3>
+                    </div>
+                    <div class="skills-animation">
+                      <div class="skill-item">
+                        <div class="skill-info">
+                          <span class="skill-name">Kubernetes (AKS/EKS/GKE)</span>
+                          <span class="skill-percentage">95%</span>
+                        </div>
+                        <div class="skill-bar progress">
+                          <div class="progress-bar" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                      </div>
+                      <div class="skill-item">
+                        <div class="skill-info">
+                          <span class="skill-name">Docker & Swarm</span>
+                          <span class="skill-percentage">90%</span>
+                        </div>
+                        <div class="skill-bar progress">
+                          <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                      </div>
+                      <div class="skill-item">
+                        <div class="skill-info">
+                          <span class="skill-name">Helm Charts & Istio</span>
+                          <span class="skill-percentage">85%</span>
+                        </div>
+                        <div class="skill-bar progress">
+                          <div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="col-md-6" data-aos="flip-left" data-aos-delay="300">
+                  <div class="skill-card">
+                    <div class="skill-header">
+                      <i class="bi bi-diagram-3"></i>
+                      <h3>Infrastructure as Code</h3>
+                    </div>
+                    <div class="skills-animation">
+                      <div class="skill-item">
+                        <div class="skill-info">
+                          <span class="skill-name">Terraform (Multi-Cloud)</span>
+                          <span class="skill-percentage">95%</span>
+                        </div>
+                        <div class="skill-bar progress">
+                          <div class="progress-bar" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                      </div>
+                      <div class="skill-item">
+                        <div class="skill-info">
+                          <span class="skill-name">Ansible Automation</span>
+                          <span class="skill-percentage">85%</span>
+                        </div>
+                        <div class="skill-bar progress">
+                          <div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                      </div>
+                      <div class="skill-item">
+                        <div class="skill-info">
+                          <span class="skill-name">ARM Templates & Bicep</span>
+                          <span class="skill-percentage">80%</span>
+                        </div>
+                        <div class="skill-bar progress">
+                          <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="col-md-6" data-aos="flip-left" data-aos-delay="400">
+                  <div class="skill-card">
+                    <div class="skill-header">
+                      <i class="bi bi-infinity"></i>
+                      <h3>CI/CD Pipelines</h3>
+                    </div>
+                    <div class="skills-animation">
+                      <div class="skill-item">
+                        <div class="skill-info">
+                          <span class="skill-name">Jenkins (Groovy/Shared Libs)</span>
+                          <span class="skill-percentage">95%</span>
+                        </div>
+                        <div class="skill-bar progress">
+                          <div class="progress-bar" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                      </div>
+                      <div class="skill-item">
+                        <div class="skill-info">
+                          <span class="skill-name">Azure DevOps (YAML/Boards)</span>
+                          <span class="skill-percentage">90%</span>
+                        </div>
+                        <div class="skill-bar progress">
+                          <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                      </div>
+                      <div class="skill-item">
+                        <div class="skill-info">
+                          <span class="skill-name">GitOps (FluxCD/Argo) & Git</span>
+                          <span class="skill-percentage">85%</span>
+                        </div>
+                        <div class="skill-bar progress">
+                          <div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="col-md-6" data-aos="flip-left" data-aos-delay="500">
+                  <div class="skill-card">
+                    <div class="skill-header">
+                      <i class="bi bi-code-slash"></i>
+                      <h3>Coding & Databases</h3>
+                    </div>
+                    <div class="skills-animation">
+                      <div class="skill-item">
+                        <div class="skill-info">
+                          <span class="skill-name">Python (Flask/FastAPI)</span>
+                          <span class="skill-percentage">90%</span>
+                        </div>
+                        <div class="skill-bar progress">
+                          <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                      </div>
+                      <div class="skill-item">
+                        <div class="skill-info">
+                          <span class="skill-name">Bash/Shell & PowerShell</span>
+                          <span class="skill-percentage">95%</span>
+                        </div>
+                        <div class="skill-bar progress">
+                          <div class="progress-bar" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                      </div>
+                      <div class="skill-item">
+                        <div class="skill-info">
+                          <span class="skill-name">SQL, NoSQL & CosmosDB</span>
+                          <span class="skill-percentage">85%</span>
+                        </div>
+                        <div class="skill-bar progress">
+                          <div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="col-md-6" data-aos="flip-left" data-aos-delay="600">
+                  <div class="skill-card">
+                    <div class="skill-header">
+                      <i class="bi bi-graph-up"></i>
+                      <h3>Observability & OS</h3>
+                    </div>
+                    <div class="skills-animation">
+                      <div class="skill-item">
+                        <div class="skill-info">
+                          <span class="skill-name">ELK Stack, Prometheus & Grafana</span>
+                          <span class="skill-percentage">90%</span>
+                        </div>
+                        <div class="skill-bar progress">
+                          <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                      </div>
+                      <div class="skill-item">
+                        <div class="skill-info">
+                          <span class="skill-name">Linux Administration</span>
+                          <span class="skill-percentage">95%</span>
+                        </div>
+                        <div class="skill-bar progress">
+                          <div class="progress-bar" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                      </div>
+                      <div class="skill-item">
+                        <div class="skill-info">
+                          <span class="skill-name">SonarQube & Selenium</span>
+                          <span class="skill-percentage">85%</span>
+                        </div>
+                        <div class="skill-bar progress">
+                          <div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
 
                 <div class="col-md-6" data-aos="flip-left" data-aos-delay="400">
                   <div class="skill-card">
@@ -382,7 +693,7 @@
                   </div>
                   <div class="stat-info">
                     <span class="stat-number">Founder</span>
-                    <span class="stat-label">TechSlate Ltd</span>
+                    <span class="stat-label">TechSlate Limited</span>
                   </div>
                 </div>
 
@@ -437,11 +748,11 @@
                     <span class="duration">Nov 2021 - Present</span>
                   </div>
                   <div class="card-body">
-                    <p><strong>EdTech Leadership & Business Strategy</strong> - Created an experiential digital platform to train fresh graduates and job seekers in IT[cite: 11].</p>
+                    <p><strong>EdTech Leadership & Business Strategy</strong> - Created an experiential digital platform to train fresh graduates and job seekers in IT.</p>
                     <ul class="achievements">
-                      <li>Mentored over 100 students with >50% job placement success in the UK Digital Sector[cite: 18].</li>
-                      <li>Developed horizontal and vertical scaling strategies to generate significant revenue[cite: 20].</li>
-                      <li>Designed the entire curriculum and technical roadmap for student mentorship[cite: 17].</li>
+                      <li>Mentored over 100 students with >50% job placement success in the UK Digital Sector.</li>
+                      <li>Developed horizontal and vertical scaling strategies to generate significant revenue.</li>
+                      <li>Designed the entire curriculum and technical roadmap for student mentorship.</li>
                     </ul>
                   </div>
                 </div>
@@ -474,12 +785,12 @@
                     <span class="duration">Aug 2022 - Sep 2023</span>
                   </div>
                   <div class="card-body">
-                    <p><strong>Cloud Design & Migration (RHS Grow)</strong> - Led GCP to Azure migration and platform modernization[cite: 32, 34].</p>
+                    <p><strong>Cloud Design & Migration (RHS Grow)</strong> - Led GCP to Azure migration and platform modernization.</p>
                     <ul class="achievements">
-                      <li>Designed Terraform IaC modules with Landing Zones for multi-team governance[cite: 35, 36].</li>
-                      <li>Created B2C Tenants to facilitate secure connections between external apps and API Management[cite: 39].</li>
-                      <li>Established Hub Services (SonarQube) via Azure Container Instances for shared access[cite: 38].</li>
-                      <li>Implemented Network Security Groups (NSGs), Route Tables, and vNets for application needs[cite: 41].</li>
+                      <li>Designed Terraform IaC modules with Landing Zones for multi-team governance.</li>
+                      <li>Created B2C Tenants to facilitate secure connections between external apps and API Management.</li>
+                      <li>Established Hub Services (SonarQube) via Azure Container Instances for shared access.</li>
+                      <li>Implemented Network Security Groups (NSGs), Route Tables, and vNets for application needs.</li>
                     </ul>
                   </div>
                 </div>
@@ -493,11 +804,11 @@
                     <span class="duration">Jan 2021 - May 2022</span>
                   </div>
                   <div class="card-body">
-                    <p><strong>DBaaS - Database as Service</strong> - Built enterprise database platform with governance and automation[cite: 48].</p>
+                    <p><strong>DBaaS - Database as Service</strong> - Built enterprise database platform with governance and automation.</p>
                     <ul class="achievements">
-                      <li>Utilized Terraform to provision resources across Azure, AWS, and GCP (Cross-Cloud)[cite: 49].</li>
-                      <li>Packaged Database as a Service with built-in policies and guardrails into a Service Catalog[cite: 50, 52].</li>
-                      <li>Managed AKS deployments and Kubernetes operations using Kubectl and Pipelines[cite: 54].</li>
+                      <li>Utilized Terraform to provision resources across Azure, AWS, and GCP (Cross-Cloud).</li>
+                      <li>Packaged Database as a Service with built-in policies and guardrails into a Service Catalog.</li>
+                      <li>Managed AKS deployments and Kubernetes operations using Kubectl and Pipelines.</li>
                     </ul>
                   </div>
                 </div>
@@ -521,12 +832,12 @@
                     <span class="duration">Apr 2019 - Dec 2021</span>
                   </div>
                   <div class="card-body">
-                    <p><strong>Journey to Cloud (J2C/Monarch)</strong> - Led cloud migration and DevOps transformation[cite: 99].</p>
+                    <p><strong>Journey to Cloud (J2C/Monarch)</strong> - Led cloud migration and DevOps transformation.</p>
                     <ul class="achievements">
-                      <li>Provisioned Azure infrastructure using Terraform, Bicep, and ARM templates[cite: 61, 62].</li>
-                      <li>Developed pipelines for Angular, Java Spring Boot, and Python via Jenkins/Azure DevOps[cite: 64].</li>
-                      <li>Initiated and developed a Self-Service Portal for internal teams[cite: 125].</li>
-                      <li>Implemented monitoring using Nagios and ELK stack (Elasticsearch, Logstash, Kibana)[cite: 73].</li>
+                      <li>Provisioned Azure infrastructure using Terraform, Bicep, and ARM templates.</li>
+                      <li>Developed pipelines for Angular, Java Spring Boot, and Python via Jenkins/Azure DevOps.</li>
+                      <li>Initiated and developed a Self-Service Portal for internal teams.</li>
+                      <li>Implemented monitoring using Nagios and ELK stack (Elasticsearch, Logstash, Kibana).</li>
                     </ul>
                   </div>
                 </div>
@@ -540,12 +851,12 @@
                     <span class="duration">Mar 2017 - Mar 2019</span>
                   </div>
                   <div class="card-body">
-                    <p><strong>Cloud Initiation Programs</strong> - Delivered DevOps solutions for US and Canadian clients[cite: 130].</p>
+                    <p><strong>Cloud Initiation Programs</strong> - Delivered DevOps solutions for US and Canadian clients.</p>
                     <ul class="achievements">
-                      <li>Clients: Fidelis CyberSecurity, AeroHive Networks, UMUC, Teranet[cite: 131].</li>
-                      <li>Migrated projects from on-premises TFS to Azure DevOps (VSO)[cite: 145].</li>
-                      <li>Generated approx. 2M in revenue by winning back clients through rapid Proof of Concepts[cite: 13, 14].</li>
-                      <li>Automated build/deployment pipelines using Jenkins and Azure DevOps[cite: 148].</li>
+                      <li>Clients: Fidelis CyberSecurity, AeroHive Networks, UMUC, Teranet.</li>
+                      <li>Migrated projects from on-premises TFS to Azure DevOps (VSO).</li>
+                      <li>Generated approx. 2M in revenue by winning back clients through rapid Proof of Concepts.</li>
+                      <li>Automated build/deployment pipelines using Jenkins and Azure DevOps.</li>
                     </ul>
                   </div>
                 </div>
@@ -559,10 +870,10 @@
                     <span class="duration">Aug 2013 - Mar 2017</span>
                   </div>
                   <div class="card-body">
-                    <p><strong>Intelligent Directory - Health Information Exchange</strong> - Led DevOps and delivery management[cite: 156].</p>
+                    <p><strong>Intelligent Directory - Health Information Exchange</strong> - Led DevOps and delivery management.</p>
                     <ul class="achievements">
-                        <li>Contributed to the development of Health Information Exchange (HIE)[cite: 22].</li>
-                        <li>Designed architecture, conducted code reviews, and set up CI/CD tools[cite: 23].</li>
+                        <li>Contributed to the development of Health Information Exchange (HIE).</li>
+                        <li>Designed architecture, conducted code reviews, and set up CI/CD tools.</li>
                     </ul>
                   </div>
                 </div>
@@ -579,7 +890,7 @@
                     <div class="degree-header">
                       <h3>Bachelor of Technology</h3>
                     </div>
-                    <h4 class="institution">Information Technology - JNTU, Hyderabad, India [cite: 181]</h4>
+                    <h4 class="institution">Information Technology - JNTU, Hyderabad, India </h4>
                   </div>
                 </div>
                 <div class="education-item" data-aos="slide-up" data-aos-delay="400">
@@ -587,7 +898,7 @@
                     <div class="degree-header">
                       <h3>Diploma in Mining Engineering</h3>
                     </div>
-                    <h4 class="institution">Hyderabad, India [cite: 182]</h4>
+                    <h4 class="institution">Hyderabad, India </h4>
                   </div>
                 </div>
               </div>
@@ -792,7 +1103,7 @@
                 </div>
                 <div class="content">
                   <h4>Email</h4>
-                  <p>ramu@techslatelimited.com</p>
+                  <p>ramuoncloud@gmail.com</p>
                 </div>
               </div>
 
@@ -803,7 +1114,8 @@
                 <div class="content">
                   <h4>Professional Network</h4>
                   <p><a href="https://linkedin.com/in/ramugurrapu" target="_blank">LinkedIn Profile</a></p>
-                  <p><a href="https://github.com/ramugurrapu" target="_blank">GitHub Portfolio</a></p>
+                  <p><a href="https://github.com/linuxramu?tab=repositories" target="_blank">GitHub Portfolio 1</a></p>
+                  <p><a href="https://github.com/techslateramu?tab=repositories" target="_blank">GitHub Portfolio 2</a></p>
                 </div>
               </div>
             </div>
@@ -855,8 +1167,9 @@
       </div>
       <div class="social-links d-flex justify-content-center">
         <a href="https://linkedin.com/in/ramugurrapu" target="_blank"><i class="bi bi-linkedin"></i></a>
-        <a href="https://github.com/ramugurrapu" target="_blank"><i class="bi bi-github"></i></a>
-        <a href="mailto:ramu@techslatelimited.com"><i class="bi bi-envelope"></i></a>
+        <a href="https://github.com/linuxramu?tab=repositories" target="_blank"><i class="bi bi-github"></i></a>
+        <a href="https://github.com/techslateramu?tab=repositories" target="_blank"><i class="bi bi-github"></i></a>
+        <a href="mailto:ramuoncloud@gmail.com"><i class="bi bi-envelope"></i></a>
       </div>
       <div class="credits">
         Cloud & DevOps Leadership | Platform Engineering | Founder TechSlate
