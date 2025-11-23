@@ -1,31 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Ramu Gurrapu - Cloud Strategist & Founder</title>
-  <meta name="description" content="Technology Leader & Founder with 23+ years experience in Cloud, DevOps, and Data Engineering">
-  <meta name="keywords" content="Cloud Architecture, DevOps, Azure, AWS, GCP, Data Engineering, Platform Engineering, TechSlate">
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Ramu Gurrapu - Cloud Strategist & Founder</title>
+  
+    <meta name="description" content="Technology Leader & Founder with 23+ years experience in Cloud Strategy, DevOps, Data Engineering, and Platform Architecture. Actively seeking roles in Cloud Strategy Leadership and Enterprise Platform Modernization.">
+    <meta name="keywords" content="Cloud Architecture, DevOps, Azure, AWS, GCP, Data Engineering, Platform Engineering, Cloud Strategy Leadership, Platform Modernization, TechSlate">
+  
+    <link href="assets/img/favicon3.ico" rel="icon">
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Open+Sans:wght@300;400;600;700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link href="assets/css/main.css" rel="stylesheet">
+  </head>
 
-  <link href="assets/img/favicon3.ico" rel="icon">
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Open+Sans:wght@300;400;600;700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link href="assets/css/main.css" rel="stylesheet">
-</head>
 
 <body class="index-page">
 
   <script>
     function validateCode() {
-        // The secret code
-        const secret = "1234"; 
+        const encodedSecret = "MTIzNA=="; 
+        
+        const secret = atob(encodedSecret); // '1234'
         
         const input = document.getElementById('accessCodeInput').value;
         const lockScreen = document.getElementById('site-lock');
@@ -176,7 +179,7 @@
               </div>
 
               <div class="hero-actions" data-aos="fade-up" data-aos-delay="300">
-                <a href="#resume" class="btn btn-primary">View Experience</a>
+                <a href="#about" class="btn btn-primary">Know more About ME</a>
                 <a href="#contact" class="btn btn-outline">Get In Touch</a>
               </div>
 
@@ -213,7 +216,9 @@
       </div>
     </section>
 
-    <section id="about" class="about section">
+
+  
+  <section id="about" class="about section">
       <div class="container section-title">
         <h2>About</h2>
         <p>Transforming enterprises through cloud innovation and empowering the next generation of tech talent.</p>
@@ -265,29 +270,50 @@
               </div>
 
               <div class="journey-timeline" data-aos="fade-up" data-aos-delay="300">
+  
                 <div class="timeline-item">
-                  <div class="year">2003</div>
-                  <div class="description">Started IT career focused on quality and software excellence </div>
+                  <div class="year">2003 – 2010</div>
+                  <div class="description">
+                    <strong>Engineering Foundation & Automation (SDET)</strong><br>
+                    Started career building code-based automation frameworks and internal development tools, operating as a Software Development Engineer in Test.
+                  </div>
                 </div>
+              
                 <div class="timeline-item">
-                  <div class="year">2021</div>
-                  <div class="description">Founded TechSlate Limited to mentor IT graduates </div>
+                  <div class="year">2010 – 2017</div>
+                  <div class="description">
+                    <strong>Full Stack Development & DevOps Shift</strong><br>
+                    Transitioned into frontend development and technical delivery, leading the shift to early DevOps automation for major healthcare and social platforms.
+                  </div>
                 </div>
+              
                 <div class="timeline-item">
-                  <div class="year">2023+</div>
-                  <div class="description">Leading platform engineering for global financial institutions</div>
+                  <div class="year">2017 – 2020</div>
+                  <div class="description">
+                    <strong>DevOps Consulting & Cloud Architecture</strong><br>
+                    Architected CI/CD solutions, containerization strategies, and cloud migrations for enterprise clients in Banking and Technology.
+                  </div>
                 </div>
+              
+                <div class="timeline-item">
+                  <div class="year">2021 – Present</div>
+                  <div class="description">
+                    <strong>Strategic Platform Engineering & Leadership</strong><br>
+                    Leading platform transformation for global financial institutions while mentoring the next generation of IT talent via TechSlate.
+                  </div>
+                </div>
+              
               </div>
 
               <div class="cta-section" data-aos="fade-up" data-aos-delay="400">
-                <div class="fun-fact">
+                <!-- <div class="fun-fact">
                   <span class="emoji">🚀</span>
                   <span class="text">Generating revenue & jobs through TechSlate Limited</span>
-                </div>
-                <div class="action-buttons">
-                  <a href="#resume" class="btn btn-primary">View Experience</a>
+                </div> -->
+                <!-- <div class="action-buttons">
+                  <a href="#resume" class="btn btn-primary">Detailed Experience</a>
                   <a href="mailto:ramuoncloud@gmail.com" class="btn btn-outline">Contact Me</a>
-                </div>
+                </div> -->
               </div>
             </div>
           </div>
@@ -363,7 +389,7 @@
 
 
                 
-                <div class="col-md-6" data-aos="flip-left" data-aos-delay="100">
+                <!-- <div class="col-md-6" data-aos="flip-left" data-aos-delay="100">
                   <div class="skill-card">
                     <div class="skill-header">
                       <i class="bi bi-cloud-check"></i>
@@ -400,7 +426,7 @@
                     </div>
                   </div>
                 </div>
-                
+                 -->
                 <div class="col-md-6" data-aos="flip-left" data-aos-delay="200">
                   <div class="skill-card">
                     <div class="skill-header">
@@ -723,23 +749,27 @@
       </div>
     </section>
 
+
+
     <section id="resume" class="resume section">
-      <div class="container section-title">
+      <div class="container section-title" data-aos="fade-up">
         <h2>Professional Experience</h2>
         <p>Leading cloud transformation, startups, and platform engineering across global enterprises</p>
       </div>
 
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <div class="row">
-          <div class="col-lg-6" data-aos="fade-right" data-aos-delay="200">
-            <div class="experience-section">
-              <div class="section-header">
+      <div class="container">
+        <div class="row justify-content-center">
+          
+          <div class="col-lg-10 col-12">
+
+            <div class="experience-section mb-5" data-aos="fade-up" data-aos-delay="100">
+              <div class="section-header pb-3">
                 <h2><i class="bi bi-briefcase"></i> Career Highlights</h2>
               </div>
 
               <div class="experience-cards">
                 
-                <div class="experience-card" data-aos="zoom-in" data-aos-delay="300" style="border-left: 4px solid #2ecc71;">
+                <div class="experience-card mb-4" style="border-left: 4px solid #2ecc71;">
                   <div class="card-header">
                     <div class="role-info">
                       <h3>Founder & CEO</h3>
@@ -757,7 +787,7 @@
                   </div>
                 </div>
 
-                <div class="experience-card" data-aos="zoom-in" data-aos-delay="300">
+                <div class="experience-card mb-4">
                   <div class="card-header">
                     <div class="role-info">
                       <h3>Lead DevOps Engineer</h3>
@@ -776,7 +806,7 @@
                   </div>
                 </div>
 
-                <div class="experience-card" data-aos="zoom-in" data-aos-delay="400">
+                <div class="experience-card mb-4">
                   <div class="card-header">
                     <div class="role-info">
                       <h3>Lead DevOps Engineer</h3>
@@ -795,7 +825,7 @@
                   </div>
                 </div>
 
-                <div class="experience-card" data-aos="zoom-in" data-aos-delay="500">
+                <div class="experience-card mb-4">
                   <div class="card-header">
                     <div class="role-info">
                       <h3>DevOps Engineer</h3>
@@ -814,16 +844,15 @@
                 </div>
               </div>
             </div>
-          </div>
 
-          <div class="col-lg-6" data-aos="fade-left" data-aos-delay="200">
-            <div class="experience-section">
-              <div class="section-header">
-                <h2><i class="bi bi-star"></i> More Experience</h2>
+            <div class="experience-section mb-5" data-aos="fade-up" data-aos-delay="200">
+              <div class="section-header pb-3">
+                <h2><i class="bi bi-star"></i> Previous Experience</h2>
               </div>
 
               <div class="experience-cards">
-                <div class="experience-card" data-aos="zoom-in" data-aos-delay="300">
+                
+                <div class="experience-card mb-4">
                   <div class="card-header">
                     <div class="role-info">
                       <h3>Azure DevOps Engineer</h3>
@@ -842,7 +871,7 @@
                   </div>
                 </div>
 
-                <div class="experience-card" data-aos="zoom-in" data-aos-delay="400">
+                <div class="experience-card mb-4">
                   <div class="card-header">
                     <div class="role-info">
                       <h3>DevOps Consultant</h3>
@@ -851,9 +880,8 @@
                     <span class="duration">Mar 2017 - Mar 2019</span>
                   </div>
                   <div class="card-body">
-                    <p><strong>Cloud Initiation Programs</strong> - Delivered DevOps solutions for US and Canadian clients.</p>
+                    <p><strong>Clients: Fidelis CyberSecurity, AeroHive Networks, UMUC, Teranet</strong></p>
                     <ul class="achievements">
-                      <li>Clients: Fidelis CyberSecurity, AeroHive Networks, UMUC, Teranet.</li>
                       <li>Migrated projects from on-premises TFS to Azure DevOps (VSO).</li>
                       <li>Generated approx. 2M in revenue by winning back clients through rapid Proof of Concepts.</li>
                       <li>Automated build/deployment pipelines using Jenkins and Azure DevOps.</li>
@@ -861,40 +889,125 @@
                   </div>
                 </div>
 
-                <div class="experience-card" data-aos="zoom-in" data-aos-delay="500">
+                <div class="experience-card mb-4">
                   <div class="card-header">
                     <div class="role-info">
-                      <h3>Technical Delivery Manager</h3>
+                      <h3>DevOps & Technical Delivery Manager</h3>
                       <h4>UnitedHealth Group (Optum)</h4>
                     </div>
                     <span class="duration">Aug 2013 - Mar 2017</span>
                   </div>
                   <div class="card-body">
-                    <p><strong>Intelligent Directory - Health Information Exchange</strong> - Led DevOps and delivery management.</p>
+                    <p><strong>Intelligent Directory - Health Information Exchange</strong></p>
                     <ul class="achievements">
                         <li>Contributed to the development of Health Information Exchange (HIE).</li>
                         <li>Designed architecture, conducted code reviews, and set up CI/CD tools.</li>
                     </ul>
                   </div>
                 </div>
+
+                <div class="experience-card mb-4">
+                  <div class="card-header">
+                    <div class="role-info">
+                      <h3>Frontend Developer</h3>
+                      <h4>CSC, India</h4>
+                    </div>
+                    <span class="duration">Dec 2011 - Aug 2013</span>
+                  </div>
+                  <div class="card-body">
+                    <p><strong>Clients: Sylvan, UMUC</strong></p>
+                    <ul class="achievements">
+                        <li>Developed responsive frontend interfaces for educational sector clients.</li>
+                        <li>Ensured cross-browser compatibility and optimized UI performance.</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="experience-card mb-4">
+                  <div class="card-header">
+                    <div class="role-info">
+                      <h3>Lead - Automation</h3>
+                      <h4>Rofous, India</h4>
+                    </div>
+                    <span class="duration">Nov 2010 - Dec 2011</span>
+                  </div>
+                  <div class="card-body">
+                    <p><strong>Client: LinkedIn</strong></p>
+                    <ul class="achievements">
+                        <li>Led automation testing initiatives for high-traffic social platform features.</li>
+                        <li>Designed, maintained, and executed automated test scripts to ensure release quality.</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="experience-card mb-4">
+                  <div class="card-header">
+                    <div class="role-info">
+                      <h3>QA Lead</h3>
+                      <h4>Persistent Systems Pvt Ltd</h4>
+                    </div>
+                    <span class="duration">Feb 2010 - Oct 2010</span>
+                  </div>
+                  <div class="card-body">
+                    <p><strong>Client: LabVantage</strong></p>
+                    <ul class="achievements">
+                        <li>Managed Quality Assurance processes for Laboratory Information Management Systems (LIMS).</li>
+                        <li>Coordinated with development teams to track defects and validate fixes.</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="experience-card mb-4">
+                  <div class="card-header">
+                    <div class="role-info">
+                      <h3>QA Lead</h3>
+                      <h4>Capgemini, India</h4>
+                    </div>
+                    <span class="duration">Jun 2007 - Jan 2010</span>
+                  </div>
+                  <div class="card-body">
+                    <p><strong>Clients: Morgan Stanley, 21st Century, AIG</strong></p>
+                    <ul class="achievements">
+                        <li>Led QA teams for major financial and insurance sector clients.</li>
+                        <li>Oversaw User Acceptance Testing (UAT) and compliance validation.</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="experience-card mb-4">
+                  <div class="card-header">
+                    <div class="role-info">
+                      <h3>Quality Analyst</h3>
+                      <h4>Cadsys India Pvt Limited</h4>
+                    </div>
+                    <span class="duration">Mar 2003 - Jan 2006</span>
+                  </div>
+                  <div class="card-body">
+                    <p><strong>Client: Apex Covantage</strong></p>
+                    <ul class="achievements">
+                        <li>Conducted quality analysis and data validation for engineering projects.</li>
+                        <li>Maintained strict adherence to quality standards and reporting metrics.</li>
+                    </ul>
+                  </div>
+                </div>
               </div>
             </div>
 
-            <div class="education-section" style="margin-top: 30px;">
-              <div class="section-header">
+            <div class="education-section" style="margin-top: 50px;" data-aos="fade-up" data-aos-delay="300">
+              <div class="section-header pb-3">
                 <h2><i class="bi bi-mortarboard"></i> Education</h2>
               </div>
               <div class="education-timeline">
-                <div class="education-item" data-aos="slide-up" data-aos-delay="300">
-                  <div class="education-content">
+                <div class="education-item mb-3">
+                  <div class="education-content p-4" style="background: var(--surface-color); border-radius: 8px; box-shadow: 0 0 15px rgba(0,0,0,0.05);">
                     <div class="degree-header">
                       <h3>Bachelor of Technology</h3>
                     </div>
                     <h4 class="institution">Information Technology - JNTU, Hyderabad, India </h4>
                   </div>
                 </div>
-                <div class="education-item" data-aos="slide-up" data-aos-delay="400">
-                  <div class="education-content">
+                <div class="education-item">
+                  <div class="education-content p-4" style="background: var(--surface-color); border-radius: 8px; box-shadow: 0 0 15px rgba(0,0,0,0.05);">
                     <div class="degree-header">
                       <h3>Diploma in Mining Engineering</h3>
                     </div>
@@ -903,11 +1016,16 @@
                 </div>
               </div>
             </div>
+
           </div>
         </div>
       </div>
     </section>
 
+
+
+
+    
     <section id="portfolio" class="portfolio section">
       <div class="container section-title">
         <h2>Key Projects & Achievements</h2>
@@ -1074,7 +1192,9 @@
           <div class="col-lg-5">
             <div class="info-box" data-aos="fade-up" data-aos-delay="200">
               <h3>Contact Information</h3>
-              <p>Available for VP/Director level positions in Cloud Architecture, Platform Engineering, and DevOps Leadership.</p>
+              <p>
+                Actively seeking VP/Director level positions in Cloud Strategy Leadership and Enterprise Platform Modernization. My focus is on leveraging 23+ years of experience in Cloud Architecture, Platform Engineering, and DevOps Leadership to lead global teams, define future-state cloud architectures (Azure, AWS, GCP), and drive significant business transformation through DevSecOps governance and efficient platform delivery.
+              </p>
 
               <div class="info-item" data-aos="fade-up" data-aos-delay="300">
                 <div class="icon-box">
@@ -1082,7 +1202,7 @@
                 </div>
                 <div class="content">
                   <h4>Location</h4>
-                  <p>United Kingdom</p>
+                  <p>India</p>
                   <p>Open to Remote & Hybrid</p>
                 </div>
               </div>
@@ -1093,7 +1213,7 @@
                 </div>
                 <div class="content">
                   <h4>Phone</h4>
-                  <p>+44 777 864 2927</p>
+                  <p>+91 9299991020</p>
                 </div>
               </div>
 
@@ -1157,6 +1277,12 @@
         </div>
       </div>
     </section>
+
+
+
+
+
+
 
   </main>
 
