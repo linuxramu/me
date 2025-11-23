@@ -28,7 +28,7 @@
     function validateCode() {
         const encodedSecret = "MTIzNA=="; 
         
-        const secret = atob(encodedSecret); // '1234'
+        const secret = atob(encodedSecret); 
         
         const input = document.getElementById('accessCodeInput').value;
         const lockScreen = document.getElementById('site-lock');
